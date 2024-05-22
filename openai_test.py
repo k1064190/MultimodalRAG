@@ -2,11 +2,9 @@ import base64
 import json
 import os
 
-import chromadb
 import qdrant_client
 import dotenv
 import matplotlib.pyplot as plt
-import requests
 import tqdm
 from PIL import Image
 import torch
@@ -14,11 +12,9 @@ import clip
 
 from llama_index.core import PromptTemplate
 from llama_index.core import SimpleDirectoryReader, Document, StorageContext
-from llama_index.core.indices import MultiModalVectorStoreIndex, VectorStoreIndex
+from llama_index.core.indices import VectorStoreIndex
 from llama_index.core.vector_stores import VectorStoreQuery
-from llama_index.vector_stores.chroma import ChromaVectorStore
 from llama_index.vector_stores.qdrant import QdrantVectorStore
-from chromadb.utils.data_loaders import ImageLoader
 from llama_index.core.schema import ImageDocument
 from llama_index.core.schema import TextNode, ImageNode
 from llama_index.multi_modal_llms.openai import OpenAIMultiModal
