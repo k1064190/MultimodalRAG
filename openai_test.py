@@ -31,9 +31,7 @@ OPENAI_API_KEY = dotenv.get_key(dotenv.find_dotenv(), "OPENAI_API_KEY")
 device = "cuda" if torch.cuda.is_available() else "cpu"
 load_previously_generated_text_descriptions = True
 dataset_path = "./asl_dataset"
-output_path = 'output.txt'
-
-out_file = open(output_path, "w")
+output_path = 'output.json'
 
 # Templates
 QUERY_STR_TEMPLATE = "How can I sign a {symbol}?."
@@ -149,11 +147,11 @@ if not load_previously_generated_text_descriptions:
 
     # get text desc and save to text attr
     for img_doc in tqdm.tqdm(image_to_text_document):
-        response = openai_mm_llm.complete(
+        img_response = openai_mm_llm.complete(
             prompt="Describe the images as an alternative text",
             image_documents=[img_doc],
         )
-        img_doc.text = response.text
+        img_doc.text = img_response.text
 
     # save so don't have to incur expensive gpt-4v calls again
     desc_jsonl = [
@@ -215,15 +213,12 @@ def display_query_and_multimodal_response2(query, response):
         if isinstance(node, TextNode):
             print(f"Text: {node.text}")
             print(f"Imgpath: {node.metadata['file_path']}")
-            out_file.write(f"Text: {node.text}\n")
-            out_file.write(f"Imgpath: {node.metadata['file_path']}\n")
         elif isinstance(node, ImageNode):
             img = Image.open(node.metadata["file_path"]).convert("RGB")
             plt.imshow(img)
             plt.axis("off")
             plt.show()
         print(f"Similarity: {sim}")
-        out_file.write(f"Similarity: {sim}\n")
         print("---------------------")
 
 
@@ -246,67 +241,116 @@ symbol = ["A"]
 text_hit_num = 0
 img_hit_num = 0
 text_img_hit_num = 0
+text_mrr = 0
+img_mrr = 0
+text_img_mrr = 0
+results = {}
 for s in symbol:
     query_str = QUERY_STR_TEMPLATE.format(symbol=s)
     response_img = retrieve_image(query_str)
     response_text_img = img_text_retriever.retrieve(query_str)
     response_texts = text_retriever.retrieve(query_str)
+
+    texts = list(map(lambda x: x.node.text, response_texts))
+    text_imgs = list(map(lambda x: x.node.metadata["file_path"], response_text_img))
+    imgs = list(map(lambda node: node.metadata["file_path"], response_img.nodes))
+
+    # calculate hitrate and mrr
+
+    for i, t in enumerate(texts):
+        # t = "To sign A in ASL: A is formed by making a fist with your thumb extended and placing it on your chin."
+        if t.split(":")[0].strip().lower() == f"To sign {s} in ASL".lower():
+            text_hit_num += 1
+            text_mrr += 1/(i+1)
+            break
+
+    for i, img in enumerate(imgs):
+        # img = "asl_dataset/images/A.jpg"
+        if img.split("/")[-1].split(".")[0].lower() == s.lower():
+            img_hit_num += 1
+            img_mrr += 1/(i+1)
+            break
+
+    for i, img in enumerate(text_imgs):
+        # img = "asl_dataset/images/A.jpg"
+        if img.split("/")[-1].split(".")[0].lower() == s.lower():
+            text_img_hit_num += 1
+            text_img_mrr += 1/(i+1)
+            break
+
     text = ""
-    for r in response_texts:
-        if isinstance(r.node, TextNode):
-            text += f"{r.node.text}\n"
+    for t in texts:
+        text += t + "\n"
+    query = QA_TEMPLATE_STR.format(context_str=text,query_str=query_str)
 
-    print(response_text_img)
-    retrieved_text_img = response_text_img[0].node.metadata["file_path"]
-    print("IMGS: ", retrieved_text_img)
-    print("TEXT: ", text)
+    img_url = imgs[0]
+    base64_img = encode_image(img_url)
 
-    # print("Using openai clip embedding")
-    # display_query_and_multimodal_response2(query_str, response_img)
-    # print("\n")
-    # retrieved_img = response_img.nodes[0]
-    # img_url = retrieved_img.metadata["file_path"]
-    # base64_img = encode_image(img_url)
+    print("Generated query")
+    print(query)
 
-    # query = QA_TEMPLATE_STR.format(context_str=text,query_str=query_str)
+    client = OpenAI()
+    img_response = client.chat.completions.create(
+        model="gpt-4o",
+        messages=[
+            {
+                "role": "user",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": query
+                    },
+                    {
+                        "type": "image_url",
+                        "image_url": {
+                            "url": f"data:image/jpeg;base64,{base64_img}"
+                        }
+                    }
+                ]
+            }
+        ],
+    )
+    print(f"I_Answer: {img_response.choices[0].message.content}")
 
-    # print("Generated query")
-    # print(query)
-    # out_file.write(query)
-    #
-    # client = OpenAI()
-    #
-    # response = client.chat.completions.create(
-    #     model="gpt-4o",
-    #     messages=[
-    #         {
-    #             "role": "user",
-    #             "content": [
-    #                 {
-    #                     "type": "text",
-    #                     "text": query
-    #                 },
-    #                 {
-    #                     "type": "image_url",
-    #                     "image_url": {
-    #                         "url": f"data:image/jpeg;base64,{base64_img}"
-    #                     }
-    #                 }
-    #             ]
-    #         }
-    #     ],
-    # )
-    #
-    # print(f"Answer: {response.choices[0].message.content}")
-    # out_file.write(f"Answer: {response.choices[0].message.content}\n\n")
+    text_img = text_imgs[0]
+    base64_text_img = encode_image(text_img)
+    text_img_response = client.chat.completions.create(
+        model="gpt-4o",
+        messages=[
+            {
+                "role": "user",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": query
+                    },
+                    {
+                        "type": "image_url",
+                        "image_url": {
+                            "url": f"data:image/jpeg;base64,{base64_text_img}"
+                        }
+                    }
+                ]
+            }
+        ],
+    )
+    print(f"TI_Answer: {text_img_response.choices[0].message.content}")
 
-out_file.close()
+    results[s] = {
+        "query": query,
+        "texts": texts,
+        "imgs": imgs,
+        "text_imgs": text_imgs,
+        "img_response": img_response.choices[0].message.content,
+        "text_img_response": text_img_response.choices[0].message.content,
+    }
 
-# img_document = ImageDocument(
-#     text="A",
-#     metadata={"file_path": retrieved_img.metadata["file_path"]},
-#     embedding=retrieved_img.embedding
-# )
+results["text_hitrate"] = text_hit_num / len(symbol)
+results["img_hitrate"] = img_hit_num / len(symbol)
+results["text_img_hitrate"] = text_img_hit_num / len(symbol)
+results["text_mrr"] = text_mrr / len(symbol)
+results["img_mrr"] = img_mrr / len(symbol)
+results["text_img_mrr"] = text_img_mrr / len(symbol)
 
-# Using the retrieved image, we can now query the multimodal rag llm
-
+with open(output_path, "w") as f:
+    json.dump(results, f, indent=4)
