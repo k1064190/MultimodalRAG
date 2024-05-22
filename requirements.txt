@@ -1,0 +1,26 @@
+torch
+torchvision
+torchaudio
+python-dotenv
+chromadb
+qdrant_client
+dotenv
+matplotlib
+requests
+tqdm
+torch
+clip
+openai
+transformers
+sentence_transformers
+huggingface_hub
+ftfy
+regex
+tqdm
+scikit-image
+qdrant-client
+-e git+https://github.com/openai/CLIP.git
+
+llama-index-llms-openai
+llama-index-multi-modal-llms-openai
+
