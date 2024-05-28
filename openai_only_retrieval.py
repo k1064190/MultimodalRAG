@@ -30,29 +30,31 @@ print("Starting...")
 
 # parameters
 OPENAI_API_KEY = dotenv.get_key(dotenv.find_dotenv(), "OPENAI_API_KEY")
+print(f"Your OpenAI API key is: {OPENAI_API_KEY}")
+os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
 device = "cuda" if torch.cuda.is_available() else "cpu"
 load_previously_generated_text_descriptions = True
-dataset_path = "./asl_dataset"
-output_path = 'output.json'
+dataset_path = './Flickr8k_text'
+output_path = 'flickr.json'
 
 # Templates
-QUERY_STR_TEMPLATE = "How can I sign a {symbol}?."
-# QUERY_STR_FLICKR_TEMPLATE = "Give me a detailed description of the event where {caption} is happening."
+# QUERY_STR_TEMPLATE = "How can I sign a {symbol}?."
+QUERY_STR_FLICKR_TEMPLATE = "Give me a detailed description of the event where {caption}"
 # QUERY_STR_FLICKR_TEMPLATE = "Give me a summary of the event where {caption} is happening."
 TEXT_TEMPLATE = "To sign {symbol} in ASL: {desc}."
-QA_TEMPLATE_STR = (
-    "Images of hand gestures for ASL are provided.\n"
-    "---------------------\n"
-    "{context_str}\n"
-    "---------------------\n"
-    "If the images provided cannot help in answering the query\n"
-    "then respond that you are unable to answer the query. Otherwise,\n"
-    "using only the context provided, and not prior knowledge,\n"
-    "provide an answer to the query."
-    "Query: {query_str}\n"
-    "Answer: "
-)
-QA_TEMPLATE = PromptTemplate(QA_TEMPLATE_STR)
+# QA_TEMPLATE_STR = (
+#     "Images of hand gestures for ASL are provided.\n"
+#     "---------------------\n"
+#     "{context_str}\n"
+#     "---------------------\n"
+#     "If the images provided cannot help in answering the query\n"
+#     "then respond that you are unable to answer the query. Otherwise,\n"
+#     "using only the context provided, and not prior knowledge,\n"
+#     "provide an answer to the query."
+#     "Query: {query_str}\n"
+#     "Answer: "
+# )
+# QA_TEMPLATE = PromptTemplate(QA_TEMPLATE_STR)
 QA_FLICKR_TEMPLATE_STR = (
     "Images of events are provided.\n"
     "---------------------\n"
@@ -71,13 +73,12 @@ def encode_image(image_path):
     with open(image_path, "rb") as image_file:
         return base64.b64encode(image_file.read()).decode('utf-8')
 
-print(f"Your OpenAI API key is: {OPENAI_API_KEY}")
-os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
 
+# local qdrant client
 qdrant_client = qdrant_client.QdrantClient(location=":memory:")
-text_store = QdrantVectorStore(
-    client=qdrant_client, collection_name="text_collection"
-)
+# text_store = QdrantVectorStore(
+#     client=qdrant_client, collection_name="text_collection"
+# )
 image_store = QdrantVectorStore(
     client=qdrant_client, collection_name="image_collection"
 )
@@ -90,10 +91,30 @@ print("available models: ", clip.available_models())
 model, preprocess = clip.load("ViT-L/14", device=device)
 
 # context images
-path_to_images = f"{dataset_path}/images"
-img_paths = []
-for img_path in os.listdir(path_to_images):
-    img_paths.append(f"{path_to_images}/{img_path}")
+path_to_images = f"Flicker8k_Dataset"
+path_to_text = f"Flickr8k_text"
+# img_paths = []
+# for img_path in os.listdir(path_to_images):
+#     img_paths.append(f"{path_to_images}/{img_path}")
+
+with open(f"{path_to_text}/Flickr_8k.testImages.txt") as f:
+    test_imgs = f.read().splitlines()
+    test_imgs = list(map(lambda x: f"{path_to_images}/{x}", test_imgs))
+    img_paths = test_imgs
+
+# image to caption
+captions = {}
+text_documents = []
+with open(f"{path_to_text}/Flickr8k.token.txt") as f:
+    lines = f.readlines()
+    for line in lines:
+        img, caption = line.split("\t")
+        img = img.split("#")[0]
+        caption = caption.strip()
+        if img in captions:
+            captions[img].append(caption)
+        else:
+            captions[img] = [caption]
 
 img_emb_dict = {}
 with torch.no_grad():
@@ -121,22 +142,22 @@ def plot_images(img_paths):
 # plot_images(img_paths)
 
 
-# context text
-with open(f"{dataset_path}/asl_text_descriptions.json") as json_file:
-    asl_text_descriptions = json.load(json_file)
-text_documents = [
-    Document(text=TEXT_TEMPLATE.format(symbol=k, desc=v))
-    for k, v in asl_text_descriptions.items()
-]
-
-text_storage = StorageContext.from_defaults(vector_store=text_store)
-text_index = VectorStoreIndex.from_documents(
-    text_documents,
-    storage_context=text_storage,
-    embed_model=text_embedding
-)
-# text_retreiver
-text_retriever = text_index.as_retriever(similarity_top_k=3)
+# # context text
+# with open(f"{dataset_path}/asl_text_descriptions.json") as json_file:
+#     asl_text_descriptions = json.load(json_file)
+# text_documents = [
+#     Document(text=TEXT_TEMPLATE.format(symbol=k, desc=v))
+#     for k, v in asl_text_descriptions.items()
+# ]
+#
+# text_storage = StorageContext.from_defaults(vector_store=text_store)
+# text_index = VectorStoreIndex.from_documents(
+#     text_documents,
+#     storage_context=text_storage,
+#     embed_model=text_embedding
+# )
+# # text_retreiver
+# text_retriever = text_index.as_retriever(similarity_top_k=3)
 
 image_documents = []
 for filename, img_emb in img_emb_dict.items():
@@ -150,7 +171,7 @@ for filename, img_emb in img_emb_dict.items():
 image_storage = StorageContext.from_defaults(vector_store=image_store)
 image_index = VectorStoreIndex.from_documents(
     image_documents,
-    storage_context=image_storage
+    storage_context=image_storage,
 )
 
 if not load_previously_generated_text_descriptions:
@@ -159,16 +180,29 @@ if not load_previously_generated_text_descriptions:
         model="gpt-4o", max_new_tokens=300
     )
 
-    # make a new copy since we want to store text in its attribute
-    image_to_text_document = SimpleDirectoryReader(path_to_images).load_data()
+    # img_paths to ImageDocument
+    image_to_text_document = [
+        ImageDocument(
+            text="",
+            metadata={"file_path": img_path}
+        )
+        for img_path in img_paths
+    ]
 
     # get text desc and save to text attr
-    for img_doc in tqdm.tqdm(image_to_text_document):
-        img_response = openai_mm_llm.complete(
-            prompt="Describe the images as an alternative text",
-            image_documents=[img_doc],
-        )
-        img_doc.text = img_response.text
+    with open(f"{dataset_path}/image_descriptions.json", "w") as f:
+        for img_doc in tqdm.tqdm(image_to_text_document):
+            # catch the error
+            try:
+                img_response = openai_mm_llm.complete(
+                    prompt="Describe the images as a detailed alternative text",
+                    image_documents=[img_doc],
+                )
+                img_doc.text = img_response.text
+            except Exception as e:
+                print(f"Error: {e} on {img_doc.metadata['file_path']}")
+                # continue the loop
+                continue
 
     # save so don't have to incur expensive gpt-4v calls again
     desc_jsonl = [
@@ -185,11 +219,15 @@ else:
         ImageDocument.from_dict(el) for el in image_descriptions
     ]
 
+print(f"Number of image descriptions: {len(image_to_text_document)}")
+
 # ImageDocument to TextDocument
 img_text_document = []
+img_text_paths = []
 for img_doc in image_to_text_document:
     new_text_doc = Document(text=img_doc.text, metadata={"file_path": img_doc.metadata["file_path"]} )
     img_text_document.append(new_text_doc)
+    img_text_paths.append(img_doc.metadata["file_path"])
 
 node_parser = SentenceSplitter.from_defaults()
 image_text_nodes = node_parser.get_nodes_from_documents(image_to_text_document)
@@ -250,11 +288,6 @@ def retrieve_image(query):
     return response
 
 # TEST
-symbol = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J",
-          "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T",
-          "U", "V", "W", "X", "Y", "Z"]
-# symbol = ["A"]
-
 text_hit_num = 0
 img_hit_num = 0
 text_img_hit_num = 0
@@ -262,122 +295,71 @@ text_mrr = 0
 img_mrr = 0
 text_img_mrr = 0
 results = {}
-for s in symbol:
-    query_str = QUERY_STR_TEMPLATE.format(symbol=s)
-    response_img = retrieve_image(query_str)
-    response_text_img = img_text_retriever.retrieve(query_str)
-    response_texts = text_retriever.retrieve(query_str)
+for img_path in img_text_paths:
+    this_img_hit_num = 0
+    this_img_mrr = 0
+    this_text_img_hit_num = 0
+    this_text_img_mrr = 0
+    img_name = img_path.split("/")[-1]
+    caps = captions[img_name]
+    query_strs = []
+    for cap in caps:
+        query_str = QUERY_STR_FLICKR_TEMPLATE.format(caption=cap)
+        query_strs.append(query_str)
+        response_img = retrieve_image(query_str)
+        response_text_img = img_text_retriever.retrieve(query_str)
+        # response_texts = text_retriever.retrieve(query_str)
 
-    texts = list(map(lambda x: x.node.text, response_texts))
-    text_imgs = list(map(lambda x: x.node.metadata["file_path"], response_text_img))
-    imgs = list(map(lambda node: node.metadata["file_path"], response_img.nodes))
+        # texts = list(map(lambda x: x.node.text, response_texts))
+        text_imgs = list(map(lambda x: x.node.metadata["file_path"], response_text_img))
+        imgs = list(map(lambda node: node.metadata["file_path"], response_img.nodes))
 
-    # calculate hitrate and mrr
+        # # calculate hitrate and mrr
+        # for i, t in enumerate(texts):
+        #     # t = "To sign A in ASL: A is formed by making a fist with your thumb extended and placing it on your chin."
+        #     if t.split(":")[0].strip().lower() == f"To sign {s} in ASL".lower():
+        #         text_hit_num += 1
+        #         text_mrr += 1/(i+1)
+        #         break
 
-    for i, t in enumerate(texts):
-        # t = "To sign A in ASL: A is formed by making a fist with your thumb extended and placing it on your chin."
-        if t.split(":")[0].strip().lower() == f"To sign {s} in ASL".lower():
-            text_hit_num += 1
-            text_mrr += 1/(i+1)
-            break
+        for i, img in enumerate(imgs):
+            # img = "asl_dataset/images/A.jpg"
+            if img.split("/")[-1].split(".")[0].lower() == img_name.split(".")[0].lower():
+                this_img_hit_num += 1
+                this_img_mrr += 1 / (i + 1)
+                break
+        for i, img in enumerate(text_imgs):
+            # img = "asl_dataset/images/A.jpg"
+            if img.split("/")[-1].split(".")[0].lower() == img_name.split(".")[0].lower():
+                this_text_img_hit_num += 1
+                this_text_img_mrr += 1 / (i + 1)
+                break
+    this_img_hit_num /= len(caps)
+    this_img_mrr /= len(caps)
+    this_text_img_hit_num /= len(caps)
+    this_text_img_mrr /= len(caps)
 
-    for i, img in enumerate(imgs):
-        # img = "asl_dataset/images/A.jpg"
-        if img.split("/")[-1].split(".")[0].lower() == s.lower():
-            img_hit_num += 1
-            img_mrr += 1/(i+1)
-            break
+    img_hit_num += this_img_hit_num
+    img_mrr += this_img_mrr
+    text_img_hit_num += this_text_img_hit_num
+    text_img_mrr += this_text_img_mrr
 
-    for i, img in enumerate(text_imgs):
-        # img = "asl_dataset/images/A.jpg"
-        if img.split("/")[-1].split(".")[0].lower() == s.lower():
-            text_img_hit_num += 1
-            text_img_mrr += 1/(i+1)
-            break
-
-    text = ""
-    for t in texts:
-        text += t + "\n"
-    query = QA_TEMPLATE_STR.format(context_str=text,query_str=query_str)
-
-    base64_imgs = list(map(lambda x: encode_image(x), imgs))
-
-    client = OpenAI()
-    img_response = client.chat.completions.create(
-        model="gpt-4o",
-        messages=[
-            {
-                "role": "user",
-                "content": [
-                    {
-                        "type": "text",
-                        "text": query
-                    },
-                    *[
-                        {
-                            "type": "image_url",
-                            "image_url": {
-                                "url": f"data:image/jpeg;base64,{base64_img}"
-                            }
-                        }
-                        for base64_img in base64_imgs
-                    ]
-                ]
-            }
-        ],
-    )
-    print(f"I_Answer: {img_response.choices[0].message.content}")
-
-    base64_text_imgs = list(map(lambda x: encode_image(x), text_imgs))
-    # create img query
-    # {
-    #                         "type": "image_url",
-    #                         "image_url": {
-    #                             "url": f"data:image/jpeg;base64,{base64_text_img}"
-    #                         }
-    #                     }
-
-    text_img_response = client.chat.completions.create(
-        model="gpt-4o",
-        messages=[
-            {
-                "role": "user",
-                "content": [
-                    {
-                        "type": "text",
-                        "text": query
-                    },
-                    *[
-                        {
-                            "type": "image_url",
-                            "image_url": {
-                                "url": f"data:image/jpeg;base64,{base64_text_img}"
-                            }
-                        }
-                        for base64_text_img in base64_text_imgs
-                    ]
-                ]
-            }
-        ],
-    )
-    print(f"TI_Answer: {text_img_response.choices[0].message.content}")
-
-    results[s] = {
-        "query_str": query_str,
-        "query": query,
-        "texts": texts,
-        "imgs": imgs,
-        "text_imgs": text_imgs,
-        "img_response": img_response.choices[0].message.content,
-        "text_img_response": text_img_response.choices[0].message.content,
+    results[img_path] = {
+        "query_str": query_strs,
+        # "query": query,
+        # "texts": texts,
+        "img_hitnum": this_img_hit_num,
+        "text_img_hitnum": this_text_img_hit_num,
+        "img_mrr": this_img_mrr,
+        "text_img_mrr": this_text_img_mrr,
     }
 
-results["text_hitrate"] = text_hit_num / len(symbol)
-results["img_hitrate"] = img_hit_num / len(symbol)
-results["text_img_hitrate"] = text_img_hit_num / len(symbol)
-results["text_mrr"] = text_mrr / len(symbol)
-results["img_mrr"] = img_mrr / len(symbol)
-results["text_img_mrr"] = text_img_mrr / len(symbol)
+# results["text_hitrate"] = text_hit_num / len(img_paths)
+results["img_hitrate"] = img_hit_num / len(img_text_paths)
+results["text_img_hitrate"] = text_img_hit_num / len(img_text_paths)
+# results["text_mrr"] = text_mrr / len(img_text_paths)
+results["img_mrr"] = img_mrr / len(img_text_paths)
+results["text_img_mrr"] = text_img_mrr / len(img_text_paths)
 
 with open(output_path, "w") as f:
     json.dump(results, f, indent=4)

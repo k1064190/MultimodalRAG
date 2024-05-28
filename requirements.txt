@@ -1,15 +1,9 @@
-torch
-torchvision
-torchaudio
 python-dotenv
-chromadb
 qdrant_client
-dotenv
 matplotlib
 requests
 tqdm
 torch
-clip
 openai
 transformers
 sentence_transformers
@@ -19,8 +13,8 @@ regex
 tqdm
 scikit-image
 qdrant-client
--e git+https://github.com/openai/CLIP.git
+clip @ git+https://github.com/openai/CLIP.git@a1d071733d7111c9c014f024669f959182114e33
 
+llama-index
 llama-index-llms-openai
 llama-index-multi-modal-llms-openai
-

@@ -1,0 +1,554 @@
+{
+    "A": {
+        "query_str": "How can I sign a A?.",
+        "query": "Images of hand gestures for ASL are provided.\n---------------------\nTo sign A in ASL: A closed fist, all finger folded against the palm, thumb is straight, alongside the index finger..\nTo sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread..\nTo sign X in ASL: Middle, ring and little fingers are folded down. Index finger is bent at both joints. Thumb is pulled in and slightly bent at the joint. The hand is turned to the left so view can see thumb and index finger..\n\n---------------------\nIf the images provided cannot help in answering the query\nthen respond that you are unable to answer the query. Otherwise,\nusing only the context provided, and not prior knowledge,\nprovide an answer to the query.Query: How can I sign a A?.\nAnswer: ",
+        "texts": [
+            "To sign A in ASL: A closed fist, all finger folded against the palm, thumb is straight, alongside the index finger..",
+            "To sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread..",
+            "To sign X in ASL: Middle, ring and little fingers are folded down. Index finger is bent at both joints. Thumb is pulled in and slightly bent at the joint. The hand is turned to the left so view can see thumb and index finger.."
+        ],
+        "imgs": [
+            "./asl_dataset/images/B.jpg",
+            "./asl_dataset/images/U.jpg",
+            "./asl_dataset/images/Y.jpg"
+        ],
+        "text_imgs": [
+            "/share0/cho/MultimodalRAG/asl_dataset/images/A.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/D.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/B.jpg"
+        ],
+        "img_response": "The images provided do not show the hand gesture for the letter \"A\" in American Sign Language (ASL) based on the description given. According to the description, to sign the letter \"A\" in ASL, you would make a closed fist with all fingers folded against the palm, and the thumb is straight, alongside the index finger. \n\nTherefore, I am unable to provide the image of the correct sign for \"A\" in ASL from the provided images.",
+        "text_img_response": "Using the context provided, to sign \"A\" in ASL:\n\n- Form a closed fist with all fingers folded against the palm.\n- Keep the thumb straight and positioned alongside the index finger.\n\nThe corresponding image provided in the context shows this gesture."
+    },
+    "B": {
+        "query_str": "How can I sign a B?.",
+        "query": "Images of hand gestures for ASL are provided.\n---------------------\nTo sign B in ASL: All fingers are straight. Thumb is folded across palm..\nTo sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread..\nTo sign A in ASL: A closed fist, all finger folded against the palm, thumb is straight, alongside the index finger..\n\n---------------------\nIf the images provided cannot help in answering the query\nthen respond that you are unable to answer the query. Otherwise,\nusing only the context provided, and not prior knowledge,\nprovide an answer to the query.Query: How can I sign a B?.\nAnswer: ",
+        "texts": [
+            "To sign B in ASL: All fingers are straight. Thumb is folded across palm..",
+            "To sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread..",
+            "To sign A in ASL: A closed fist, all finger folded against the palm, thumb is straight, alongside the index finger.."
+        ],
+        "imgs": [
+            "./asl_dataset/images/B.jpg",
+            "./asl_dataset/images/P.jpg",
+            "./asl_dataset/images/A.jpg"
+        ],
+        "text_imgs": [
+            "/share0/cho/MultimodalRAG/asl_dataset/images/B.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/D.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/U.jpg"
+        ],
+        "img_response": "To sign B in ASL:\n- All fingers should be straight.\n- The thumb should be folded across the palm.\n\nThe first image you provided depicts this gesture.",
+        "text_img_response": "I am unable to answer the query using the provided images. However, based on the text description, to sign \"B\" in American Sign Language (ASL), you should:\n\n1. Keep all fingers straight.\n2. Fold your thumb across your palm."
+    },
+    "C": {
+        "query_str": "How can I sign a C?.",
+        "query": "Images of hand gestures for ASL are provided.\n---------------------\nTo sign C in ASL: All fingers partially folded. Thumb is partially folded. Hand is turn slightly to the left so viewer can see backward \"C\" shape formed by thumb and index finger..\nTo sign F in ASL: Tip of index finger is touching tip of thumb. Middle, ring and little fingers are straight and slightly spread..\nTo sign H in ASL: Ring and little finger are folded down. Thumb is folded over ring and little finger. Index finger and middle finger are straight and together. The hand is tilted over so that the fingers are horizontal and pointing to the left..\n\n---------------------\nIf the images provided cannot help in answering the query\nthen respond that you are unable to answer the query. Otherwise,\nusing only the context provided, and not prior knowledge,\nprovide an answer to the query.Query: How can I sign a C?.\nAnswer: ",
+        "texts": [
+            "To sign C in ASL: All fingers partially folded. Thumb is partially folded. Hand is turn slightly to the left so viewer can see backward \"C\" shape formed by thumb and index finger..",
+            "To sign F in ASL: Tip of index finger is touching tip of thumb. Middle, ring and little fingers are straight and slightly spread..",
+            "To sign H in ASL: Ring and little finger are folded down. Thumb is folded over ring and little finger. Index finger and middle finger are straight and together. The hand is tilted over so that the fingers are horizontal and pointing to the left.."
+        ],
+        "imgs": [
+            "./asl_dataset/images/C.jpg",
+            "./asl_dataset/images/P.jpg",
+            "./asl_dataset/images/A.jpg"
+        ],
+        "text_imgs": [
+            "/share0/cho/MultimodalRAG/asl_dataset/images/C.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/D.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/L.jpg"
+        ],
+        "img_response": "To sign a \"C\" in American Sign Language (ASL):\n\n- Partially fold all your fingers.\n- Partially fold your thumb.\n- Turn your hand slightly to the left so that the viewer can see the backward \"C\" shape formed by the thumb and index finger.\n\nPlease note that the image you provided aligns with this description.",
+        "text_img_response": "Based on the signature gesture descriptions provided:\n\nTo sign \"C\" in ASL: \n- All fingers are partially folded.\n- The thumb is partially folded.\n- The hand is turned slightly to the left to form a backward \"C\" shape with the thumb and index finger.\n\nHowever, I am unable to determine which specific image represents the sign for \"C.\" For clarification on the image, you would need to refer to the descriptions given."
+    },
+    "D": {
+        "query_str": "How can I sign a D?.",
+        "query": "Images of hand gestures for ASL are provided.\n---------------------\nTo sign D in ASL: Middle, ring and little fingers are partially folded. Tip of thumb is touching tip of middle finger. Index finger is straight. Hand is turned slightly so viewer can see \"d\" shape formed by thumb, middle and index fingers..\nThe image shows a hand making the American Sign Language (ASL) letter \"D\" gesture. The hand is positioned with the index finger pointing upwards and the thumb touching the tip of the middle finger, forming a circle. The background is a light color, and there is a green square with the letter \"D\" in the top left corner of the image.\nTo sign U in ASL: Ring and little finger are folded against the palm, held down by thumb, index and middle finger are straight and together..\n\n---------------------\nIf the images provided cannot help in answering the query\nthen respond that you are unable to answer the query. Otherwise,\nusing only the context provided, and not prior knowledge,\nprovide an answer to the query.Query: How can I sign a D?.\nAnswer: ",
+        "texts": [
+            "To sign D in ASL: Middle, ring and little fingers are partially folded. Tip of thumb is touching tip of middle finger. Index finger is straight. Hand is turned slightly so viewer can see \"d\" shape formed by thumb, middle and index fingers..",
+            "The image shows a hand making the American Sign Language (ASL) letter \"D\" gesture. The hand is positioned with the index finger pointing upwards and the thumb touching the tip of the middle finger, forming a circle. The background is a light color, and there is a green square with the letter \"D\" in the top left corner of the image.",
+            "To sign U in ASL: Ring and little finger are folded against the palm, held down by thumb, index and middle finger are straight and together.."
+        ],
+        "imgs": [
+            "./asl_dataset/images/D.jpg",
+            "./asl_dataset/images/A.jpg",
+            "./asl_dataset/images/B.jpg"
+        ],
+        "text_imgs": [
+            "/share0/cho/MultimodalRAG/asl_dataset/images/D.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/L.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/U.jpg"
+        ],
+        "img_response": "To sign the letter \"D\" in American Sign Language (ASL):\n\n1. Partially fold your middle, ring, and little fingers.\n2. Touch the tip of your thumb to the tip of your middle finger.\n3. Keep your index finger straight and pointing upwards.\n4. Turn your hand slightly so the viewer can see the \"d\" shape formed by your thumb, middle finger, and index finger.",
+        "text_img_response": "To sign the letter \"D\" in American Sign Language (ASL):\n\n1. Partially fold your middle, ring, and little fingers.\n2. Touch the tip of your middle finger to the tip of your thumb.\n3. Keep your index finger straight and pointing upwards.\n4. Turn your hand slightly so the viewer can see the \"d\" shape formed by your thumb, middle, and index fingers.\n\nHere is an image to guide you:\n\n![ASL D](https://user-images.githubusercontent.com/78339752/138178000-6b9f5f92-f24b-4c3e-b7da-44b9a13d0db2.png)\n\nThis image shows the hand gesture for signing \"D\" in ASL, as described."
+    },
+    "E": {
+        "query_str": "How can I sign a E?.",
+        "query": "Images of hand gestures for ASL are provided.\n---------------------\nTo sign E in ASL: Thumb is folded across in front of palm but not touching it. All fingers are partially folded with the tips of index, middle and ring fingers touching the thumb between the knuckle and the tip..\nTo sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread..\nTo sign X in ASL: Middle, ring and little fingers are folded down. Index finger is bent at both joints. Thumb is pulled in and slightly bent at the joint. The hand is turned to the left so view can see thumb and index finger..\n\n---------------------\nIf the images provided cannot help in answering the query\nthen respond that you are unable to answer the query. Otherwise,\nusing only the context provided, and not prior knowledge,\nprovide an answer to the query.Query: How can I sign a E?.\nAnswer: ",
+        "texts": [
+            "To sign E in ASL: Thumb is folded across in front of palm but not touching it. All fingers are partially folded with the tips of index, middle and ring fingers touching the thumb between the knuckle and the tip..",
+            "To sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread..",
+            "To sign X in ASL: Middle, ring and little fingers are folded down. Index finger is bent at both joints. Thumb is pulled in and slightly bent at the joint. The hand is turned to the left so view can see thumb and index finger.."
+        ],
+        "imgs": [
+            "./asl_dataset/images/E.jpg",
+            "./asl_dataset/images/A.jpg",
+            "./asl_dataset/images/Y.jpg"
+        ],
+        "text_imgs": [
+            "/share0/cho/MultimodalRAG/asl_dataset/images/E.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/D.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/L.jpg"
+        ],
+        "img_response": "I'm unable to answer the query based on the provided images. If you can provide images specifically corresponding to the ASL gestures mentioned in the context, I can more accurately identify them.",
+        "text_img_response": "To sign the letter \"E\" in ASL:\n\n- Fold your thumb across in front of your palm but do not let it touch the palm.\n- Partially fold all your fingers such that the tips of the index, middle, and ring fingers touch the thumb between the knuckle and the tip.\n\nThe first image you provided is the correct representation of \"E\" in ASL."
+    },
+    "F": {
+        "query_str": "How can I sign a F?.",
+        "query": "Images of hand gestures for ASL are provided.\n---------------------\nTo sign F in ASL: Tip of index finger is touching tip of thumb. Middle, ring and little fingers are straight and slightly spread..\nTo sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread..\nTo sign X in ASL: Middle, ring and little fingers are folded down. Index finger is bent at both joints. Thumb is pulled in and slightly bent at the joint. The hand is turned to the left so view can see thumb and index finger..\n\n---------------------\nIf the images provided cannot help in answering the query\nthen respond that you are unable to answer the query. Otherwise,\nusing only the context provided, and not prior knowledge,\nprovide an answer to the query.Query: How can I sign a F?.\nAnswer: ",
+        "texts": [
+            "To sign F in ASL: Tip of index finger is touching tip of thumb. Middle, ring and little fingers are straight and slightly spread..",
+            "To sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread..",
+            "To sign X in ASL: Middle, ring and little fingers are folded down. Index finger is bent at both joints. Thumb is pulled in and slightly bent at the joint. The hand is turned to the left so view can see thumb and index finger.."
+        ],
+        "imgs": [
+            "./asl_dataset/images/F.jpg",
+            "./asl_dataset/images/B.jpg",
+            "./asl_dataset/images/P.jpg"
+        ],
+        "text_imgs": [
+            "/share0/cho/MultimodalRAG/asl_dataset/images/F.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/U.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/D.jpg"
+        ],
+        "img_response": "Using the context provided, you can sign F in ASL by doing the following:\n\n- Touch the tip of your index finger to the tip of your thumb.\n- Keep your middle, ring, and little fingers straight and slightly spread.\n\nI am unable to verify this using the provided images.",
+        "text_img_response": "Based on the context provided:\n\nTo sign \"F\" in ASL:\n- The tip of the index finger touches the tip of the thumb.\n- The middle, ring, and little fingers are straight and slightly spread.\n\nHere is an image showing how to sign \"F\": \n\n![Image of signing F](https://imgv2-2-f.scribdassets.com/img/document/201157044/original/a7e6985c9e/1673420624?v=1)"
+    },
+    "G": {
+        "query_str": "How can I sign a G?.",
+        "query": "Images of hand gestures for ASL are provided.\n---------------------\nTo sign G in ASL: Middle, ring and little fingers are folded down across palm. Thumb is straight but pulled in so that it is in front of the index finger. The index finger is straight and pointing forwards slightly so that it is parallel to the thumb, The thumb and index finger are not touching. The whole hand is turned towards the left and tilted slightly so the thumb and index finger are towards the viewer and pointing up at about 45 degrees..\nTo sign U in ASL: Ring and little finger are folded against the palm, held down by thumb, index and middle finger are straight and together..\nTo sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread..\n\n---------------------\nIf the images provided cannot help in answering the query\nthen respond that you are unable to answer the query. Otherwise,\nusing only the context provided, and not prior knowledge,\nprovide an answer to the query.Query: How can I sign a G?.\nAnswer: ",
+        "texts": [
+            "To sign G in ASL: Middle, ring and little fingers are folded down across palm. Thumb is straight but pulled in so that it is in front of the index finger. The index finger is straight and pointing forwards slightly so that it is parallel to the thumb, The thumb and index finger are not touching. The whole hand is turned towards the left and tilted slightly so the thumb and index finger are towards the viewer and pointing up at about 45 degrees..",
+            "To sign U in ASL: Ring and little finger are folded against the palm, held down by thumb, index and middle finger are straight and together..",
+            "To sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread.."
+        ],
+        "imgs": [
+            "./asl_dataset/images/G.jpg",
+            "./asl_dataset/images/P.jpg",
+            "./asl_dataset/images/D.jpg"
+        ],
+        "text_imgs": [
+            "/share0/cho/MultimodalRAG/asl_dataset/images/G.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/D.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/L.jpg"
+        ],
+        "img_response": "I am unable to answer the query based on the provided images.",
+        "text_img_response": "I am unable to answer the query with the provided images.\n\nTo sign the letter \"G\" in ASL:\n- Fold your middle, ring, and little fingers down across your palm.\n- Keep your thumb straight but pulled in so that it is in front of the index finger.\n- Point your index finger straight and forward, so it is parallel to the thumb. The thumb and index finger should not be touching.\n- Turn your whole hand towards the left and tilt it slightly so the thumb and index finger are towards the viewer and pointing up at about a 45-degree angle.\n"
+    },
+    "H": {
+        "query_str": "How can I sign a H?.",
+        "query": "Images of hand gestures for ASL are provided.\n---------------------\nTo sign H in ASL: Ring and little finger are folded down. Thumb is folded over ring and little finger. Index finger and middle finger are straight and together. The hand is tilted over so that the fingers are horizontal and pointing to the left..\nTo sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread..\nTo sign U in ASL: Ring and little finger are folded against the palm, held down by thumb, index and middle finger are straight and together..\n\n---------------------\nIf the images provided cannot help in answering the query\nthen respond that you are unable to answer the query. Otherwise,\nusing only the context provided, and not prior knowledge,\nprovide an answer to the query.Query: How can I sign a H?.\nAnswer: ",
+        "texts": [
+            "To sign H in ASL: Ring and little finger are folded down. Thumb is folded over ring and little finger. Index finger and middle finger are straight and together. The hand is tilted over so that the fingers are horizontal and pointing to the left..",
+            "To sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread..",
+            "To sign U in ASL: Ring and little finger are folded against the palm, held down by thumb, index and middle finger are straight and together.."
+        ],
+        "imgs": [
+            "./asl_dataset/images/H.jpg",
+            "./asl_dataset/images/B.jpg",
+            "./asl_dataset/images/A.jpg"
+        ],
+        "text_imgs": [
+            "/share0/cho/MultimodalRAG/asl_dataset/images/H.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/U.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/D.jpg"
+        ],
+        "img_response": "I am unable to answer the query based on the images provided.",
+        "text_img_response": "To sign \"H\" in American Sign Language (ASL), follow these steps:\n\n1. Fold your ring and little fingers down.\n2. Place your thumb over the folded ring and little fingers.\n3. Keep your index finger and middle finger straight and together.\n4. Tilt your hand over so that your fingers are horizontal and pointing to the left.\n\nHere is an image illustrating how to sign \"H\":\n![H](https://user-images.githubusercontent.com/113610201/113610388-a6b5fd00-95ee-11eb-80d5-9a8bd3efefa6.png)"
+    },
+    "I": {
+        "query_str": "How can I sign a I?.",
+        "query": "Images of hand gestures for ASL are provided.\n---------------------\nTo sign I in ASL: Index, middle and ring fingers are folded down. Thumb is folded across index middle and ring fingers. Little finger is straight..\nTo sign U in ASL: Ring and little finger are folded against the palm, held down by thumb, index and middle finger are straight and together..\nTo sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread..\n\n---------------------\nIf the images provided cannot help in answering the query\nthen respond that you are unable to answer the query. Otherwise,\nusing only the context provided, and not prior knowledge,\nprovide an answer to the query.Query: How can I sign a I?.\nAnswer: ",
+        "texts": [
+            "To sign I in ASL: Index, middle and ring fingers are folded down. Thumb is folded across index middle and ring fingers. Little finger is straight..",
+            "To sign U in ASL: Ring and little finger are folded against the palm, held down by thumb, index and middle finger are straight and together..",
+            "To sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread.."
+        ],
+        "imgs": [
+            "./asl_dataset/images/A.jpg",
+            "./asl_dataset/images/B.jpg",
+            "./asl_dataset/images/I.jpg"
+        ],
+        "text_imgs": [
+            "/share0/cho/MultimodalRAG/asl_dataset/images/I.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/L.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/U.jpg"
+        ],
+        "img_response": "I am unable to answer the query.",
+        "text_img_response": "Based on the context provided:\n\nTo sign \"I\" in ASL:\n- Fold down your index, middle, and ring fingers.\n- Fold your thumb across your index, middle, and ring fingers.\n- Keep your little finger straight."
+    },
+    "J": {
+        "query_str": "How can I sign a J?.",
+        "query": "Images of hand gestures for ASL are provided.\n---------------------\nTo sign J in ASL: Index, middle and ring fingers are folded down. Thumb is folded across index middle and ring fingers. Little finger is straight. The hand is moved so that little finger draws a \"J\" shape. Motion is a curve moving forward and then right. The hand turns to the right..\nTo sign Q in ASL: Ring and little fingers are folded down across palm. Thumb is straight but pulled in so that it is in front of the index finger. The index finger is straight and pointing forwards slightly so that it is parallel to the thumb. The index finger and thumb are not touching. The Middle finger is bent down and across to the right of the thumb (this hurts !). The whole hand is turned towards the left and tilted so the thumb and index finger are towards the viewer and pointing almost straight down..\nTo sign U in ASL: Ring and little finger are folded against the palm, held down by thumb, index and middle finger are straight and together..\n\n---------------------\nIf the images provided cannot help in answering the query\nthen respond that you are unable to answer the query. Otherwise,\nusing only the context provided, and not prior knowledge,\nprovide an answer to the query.Query: How can I sign a J?.\nAnswer: ",
+        "texts": [
+            "To sign J in ASL: Index, middle and ring fingers are folded down. Thumb is folded across index middle and ring fingers. Little finger is straight. The hand is moved so that little finger draws a \"J\" shape. Motion is a curve moving forward and then right. The hand turns to the right..",
+            "To sign Q in ASL: Ring and little fingers are folded down across palm. Thumb is straight but pulled in so that it is in front of the index finger. The index finger is straight and pointing forwards slightly so that it is parallel to the thumb. The index finger and thumb are not touching. The Middle finger is bent down and across to the right of the thumb (this hurts !). The whole hand is turned towards the left and tilted so the thumb and index finger are towards the viewer and pointing almost straight down..",
+            "To sign U in ASL: Ring and little finger are folded against the palm, held down by thumb, index and middle finger are straight and together.."
+        ],
+        "imgs": [
+            "./asl_dataset/images/J.jpg",
+            "./asl_dataset/images/P.jpg",
+            "./asl_dataset/images/D.jpg"
+        ],
+        "text_imgs": [
+            "/share0/cho/MultimodalRAG/asl_dataset/images/J.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/L.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/D.jpg"
+        ],
+        "img_response": "To sign \"J\" in ASL:\n\n1. Fold your index, middle, and ring fingers down.\n2. Fold your thumb across the index, middle, and ring fingers.\n3. Keep your little finger straight.\n4. Move your hand so that the little finger draws a \"J\" shape. The motion should be a curve that moves forward and then right.\n5. While you move your hand, it should turn to the right.\n\nUnfortunately, the images provided do not clearly depict the sign for \"J.\" Please refer to the textual instructions above to understand how to form the sign.",
+        "text_img_response": "To sign \"J\" in American Sign Language (ASL), follow these steps:\n\n1. Fold your index, middle, and ring fingers down.\n2. Fold your thumb across these fingers.\n3. Keep your little finger straight.\n4. Move your hand so that your little finger draws a \"J\" shape in the air. The motion should be a curve moving forward and then to the right.\n5. As you complete the motion, your hand will turn to the right.\n\nI hope this helps!"
+    },
+    "K": {
+        "query_str": "How can I sign a K?.",
+        "query": "Images of hand gestures for ASL are provided.\n---------------------\nTo sign K in ASL: Ring and little fingers are folded down. Index and middle finger are straight and slightly spread. Thumb is straight and pointing up to the middle finger. (This is very similar to V the only difference is the position of the thumb..\nTo sign Q in ASL: Ring and little fingers are folded down across palm. Thumb is straight but pulled in so that it is in front of the index finger. The index finger is straight and pointing forwards slightly so that it is parallel to the thumb. The index finger and thumb are not touching. The Middle finger is bent down and across to the right of the thumb (this hurts !). The whole hand is turned towards the left and tilted so the thumb and index finger are towards the viewer and pointing almost straight down..\nTo sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread..\n\n---------------------\nIf the images provided cannot help in answering the query\nthen respond that you are unable to answer the query. Otherwise,\nusing only the context provided, and not prior knowledge,\nprovide an answer to the query.Query: How can I sign a K?.\nAnswer: ",
+        "texts": [
+            "To sign K in ASL: Ring and little fingers are folded down. Index and middle finger are straight and slightly spread. Thumb is straight and pointing up to the middle finger. (This is very similar to V the only difference is the position of the thumb..",
+            "To sign Q in ASL: Ring and little fingers are folded down across palm. Thumb is straight but pulled in so that it is in front of the index finger. The index finger is straight and pointing forwards slightly so that it is parallel to the thumb. The index finger and thumb are not touching. The Middle finger is bent down and across to the right of the thumb (this hurts !). The whole hand is turned towards the left and tilted so the thumb and index finger are towards the viewer and pointing almost straight down..",
+            "To sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread.."
+        ],
+        "imgs": [
+            "./asl_dataset/images/K.jpg",
+            "./asl_dataset/images/Y.jpg",
+            "./asl_dataset/images/P.jpg"
+        ],
+        "text_imgs": [
+            "/share0/cho/MultimodalRAG/asl_dataset/images/K.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/L.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/U.jpg"
+        ],
+        "img_response": "I'm unable to provide the correct image for the sign \"K\" in ASL based on the context provided. The images included do not align with the described hand gesture for the letter \"K.\" \n\nTo sign the letter \"K\" in ASL:\n- Fold down your ring and little fingers.\n- Keep your index and middle fingers straight and slightly spread.\n- Keep your thumb straight and pointing up toward the middle finger.\n\nFor verification, please refer to another reliable source or visual guide for ASL hand signs.",
+        "text_img_response": "Based on the provided description, to sign a \"K\" in American Sign Language (ASL):\n\n1. Fold down the ring and little fingers.\n2. Keep the index and middle fingers straight and slightly spread.\n3. Extend the thumb straight and point it up towards the middle finger.\n\nThe hand gesture should look like the middle and index fingers forming a \"V\" shape with the thumb positioned between them.\n\nHere is an image showing the \"K\" sign in ASL: \n\n![ASL K Hand Gesture](https://cdn.assistivetechnologyservices.com/wp-content/uploads/2021/07/ASL_K.png)"
+    },
+    "L": {
+        "query_str": "How can I sign a L?.",
+        "query": "Images of hand gestures for ASL are provided.\n---------------------\nTo sign L in ASL: Middle, ring and little finger are folded down over palm. Index finger and thumb are straight. Thumb is sticking out sideways at 90 degrees to index finger to form \"L\" shape..\nTo sign U in ASL: Ring and little finger are folded against the palm, held down by thumb, index and middle finger are straight and together..\nThe image shows a hand making the American Sign Language (ASL) letter \"L\" gesture. The thumb and index finger are extended to form an \"L\" shape, while the other fingers are curled into the palm. There is a green square with the letter \"L\" in the bottom right corner of the image.\n\n---------------------\nIf the images provided cannot help in answering the query\nthen respond that you are unable to answer the query. Otherwise,\nusing only the context provided, and not prior knowledge,\nprovide an answer to the query.Query: How can I sign a L?.\nAnswer: ",
+        "texts": [
+            "To sign L in ASL: Middle, ring and little finger are folded down over palm. Index finger and thumb are straight. Thumb is sticking out sideways at 90 degrees to index finger to form \"L\" shape..",
+            "To sign U in ASL: Ring and little finger are folded against the palm, held down by thumb, index and middle finger are straight and together..",
+            "The image shows a hand making the American Sign Language (ASL) letter \"L\" gesture. The thumb and index finger are extended to form an \"L\" shape, while the other fingers are curled into the palm. There is a green square with the letter \"L\" in the bottom right corner of the image."
+        ],
+        "imgs": [
+            "./asl_dataset/images/L.jpg",
+            "./asl_dataset/images/Y.jpg",
+            "./asl_dataset/images/U.jpg"
+        ],
+        "text_imgs": [
+            "/share0/cho/MultimodalRAG/asl_dataset/images/L.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/U.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/D.jpg"
+        ],
+        "img_response": "Based on the context provided, you can sign \"L\" in American Sign Language (ASL) by:\n\n1. Folding your middle, ring, and little fingers down over your palm.\n2. Keeping your index finger and thumb straight.\n3. Sticking your thumb out sideways at a 90-degree angle to your index finger to form an \"L\" shape.\n\nHere is the visual representation of the ASL letter \"L\":\n![ASL L](attachment://first_image_url)\n\n(Note: There appears to be an error in attaching the URL correctly. Please refer to the provided description of the hand gesture to form the ASL letter \"L\".)",
+        "text_img_response": "To sign the letter \"L\" in American Sign Language (ASL): \n\n- Fold your middle, ring, and little fingers down over your palm.\n- Keep your index finger and thumb straight and extend them to form an \"L\" shape, with the thumb sticking out sideways at a 90-degree angle to the index finger."
+    },
+    "M": {
+        "query_str": "How can I sign a M?.",
+        "query": "Images of hand gestures for ASL are provided.\n---------------------\nTo sign M in ASL: Little finger is folded. Thumb is folded across to touch little finger. Index, middle and ring fingers are folded down over thumb..\nTo sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread..\nTo sign X in ASL: Middle, ring and little fingers are folded down. Index finger is bent at both joints. Thumb is pulled in and slightly bent at the joint. The hand is turned to the left so view can see thumb and index finger..\n\n---------------------\nIf the images provided cannot help in answering the query\nthen respond that you are unable to answer the query. Otherwise,\nusing only the context provided, and not prior knowledge,\nprovide an answer to the query.Query: How can I sign a M?.\nAnswer: ",
+        "texts": [
+            "To sign M in ASL: Little finger is folded. Thumb is folded across to touch little finger. Index, middle and ring fingers are folded down over thumb..",
+            "To sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread..",
+            "To sign X in ASL: Middle, ring and little fingers are folded down. Index finger is bent at both joints. Thumb is pulled in and slightly bent at the joint. The hand is turned to the left so view can see thumb and index finger.."
+        ],
+        "imgs": [
+            "./asl_dataset/images/M.jpg",
+            "./asl_dataset/images/A.jpg",
+            "./asl_dataset/images/P.jpg"
+        ],
+        "text_imgs": [
+            "/share0/cho/MultimodalRAG/asl_dataset/images/M.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/D.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/L.jpg"
+        ],
+        "img_response": "To sign \"M\" in ASL, follow these steps:\n\n1. Fold your little finger down.\n2. Fold your thumb across to touch your little finger.\n3. Fold your index, middle, and ring fingers down over the thumb.\n\nRefer to the context provided for a detailed description:\n\"Little finger is folded. Thumb is folded across to touch little finger. Index, middle and ring fingers are folded down over thumb.\"\n\nI am unable to comment on the images provided as they do not match the description from the context provided.",
+        "text_img_response": "To sign M in American Sign Language (ASL), follow these steps:\n\n1. Fold your little finger down.\n2. Fold your thumb across to touch your little finger.\n3. Fold your index, middle, and ring fingers down over your thumb.\n\nHere's a visual reference:\n\n![M in ASL](https://example-image-url.com)\n\n(Note: There isn't an actual image above; the steps provided should give you a good understanding of the sign for \"M.\")"
+    },
+    "N": {
+        "query_str": "How can I sign a N?.",
+        "query": "Images of hand gestures for ASL are provided.\n---------------------\nTo sign N in ASL: Little and ring finger are folded. Thumb is folded across ring and little finger. Index finger and middle finger are folded down over thumb..\nTo sign Y in ASL: Index, middle and ring ringers folded against palm. Little finger and thumb are straight and spread wide..\nTo sign F in ASL: Tip of index finger is touching tip of thumb. Middle, ring and little fingers are straight and slightly spread..\n\n---------------------\nIf the images provided cannot help in answering the query\nthen respond that you are unable to answer the query. Otherwise,\nusing only the context provided, and not prior knowledge,\nprovide an answer to the query.Query: How can I sign a N?.\nAnswer: ",
+        "texts": [
+            "To sign N in ASL: Little and ring finger are folded. Thumb is folded across ring and little finger. Index finger and middle finger are folded down over thumb..",
+            "To sign Y in ASL: Index, middle and ring ringers folded against palm. Little finger and thumb are straight and spread wide..",
+            "To sign F in ASL: Tip of index finger is touching tip of thumb. Middle, ring and little fingers are straight and slightly spread.."
+        ],
+        "imgs": [
+            "./asl_dataset/images/A.jpg",
+            "./asl_dataset/images/N.jpg",
+            "./asl_dataset/images/E.jpg"
+        ],
+        "text_imgs": [
+            "/share0/cho/MultimodalRAG/asl_dataset/images/N.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/L.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/D.jpg"
+        ],
+        "img_response": "Based on the provided context, you can sign \"N\" in ASL by following these steps:\n\n- Fold your little and ring finger down.\n- Fold your thumb across the ring and little fingers.\n- Fold your index finger and middle finger down over the thumb.\n\nThe second image in the series you provided shows the correct position for signing \"N\" in ASL.",
+        "text_img_response": "I am unable to answer the query using the provided images. \n\nHowever, based on the context provided through the description, to sign \"N\" in ASL:\n- Fold the little and ring fingers.\n- Fold the thumb across the ring and little fingers.\n- Fold the index and middle fingers down over the thumb."
+    },
+    "O": {
+        "query_str": "How can I sign a O?.",
+        "query": "Images of hand gestures for ASL are provided.\n---------------------\nTo sign O in ASL: All fingers are partially folded. Thumb is partially folded and tip of thumb is touching tip of index finger. Hand is turned slightly so viewer can see \"O\" shape formed by thumb and index finger..\nTo sign U in ASL: Ring and little finger are folded against the palm, held down by thumb, index and middle finger are straight and together..\nTo sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread..\n\n---------------------\nIf the images provided cannot help in answering the query\nthen respond that you are unable to answer the query. Otherwise,\nusing only the context provided, and not prior knowledge,\nprovide an answer to the query.Query: How can I sign a O?.\nAnswer: ",
+        "texts": [
+            "To sign O in ASL: All fingers are partially folded. Thumb is partially folded and tip of thumb is touching tip of index finger. Hand is turned slightly so viewer can see \"O\" shape formed by thumb and index finger..",
+            "To sign U in ASL: Ring and little finger are folded against the palm, held down by thumb, index and middle finger are straight and together..",
+            "To sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread.."
+        ],
+        "imgs": [
+            "./asl_dataset/images/O.jpg",
+            "./asl_dataset/images/F.jpg",
+            "./asl_dataset/images/P.jpg"
+        ],
+        "text_imgs": [
+            "/share0/cho/MultimodalRAG/asl_dataset/images/O.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/U.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/L.jpg"
+        ],
+        "img_response": "Using only the context provided, to sign \"O\" in ASL, follow these steps: \n\n1. Partially fold all your fingers.\n2. Partially fold your thumb.\n3. Touch the tip of your thumb to the tip of your index finger.\n4. Turn your hand slightly so the \"O\" shape formed by your thumb and index finger is visible to the viewer.",
+        "text_img_response": "To sign \"O\" in ASL, follow these steps:\n\n1. Partially fold all of your fingers.\n2. Partially fold your thumb.\n3. Touch the tip of your thumb to the tip of your index finger to form an \"O\" shape.\n4. Turn your hand slightly so that the viewer can clearly see the \"O\" shape formed by your thumb and index finger.\n\nBy following these steps, you can correctly sign \"O\" in American Sign Language."
+    },
+    "P": {
+        "query_str": "How can I sign a P?.",
+        "query": "Images of hand gestures for ASL are provided.\n---------------------\nTo sign P in ASL: Ring and little finger are folded down. Index finger is straight. Middle finger is straight but pointing forward so that is at 90 degrees to index finger. Tip of thumb is touching middle of middle finger. Hand is turned to the left and twisted over so that index finger is horizontal and middle finger is pointing down. Viewer can (sort of) see a \"P\" shape formed by middle finger and thumb..\nTo sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread..\nTo sign U in ASL: Ring and little finger are folded against the palm, held down by thumb, index and middle finger are straight and together..\n\n---------------------\nIf the images provided cannot help in answering the query\nthen respond that you are unable to answer the query. Otherwise,\nusing only the context provided, and not prior knowledge,\nprovide an answer to the query.Query: How can I sign a P?.\nAnswer: ",
+        "texts": [
+            "To sign P in ASL: Ring and little finger are folded down. Index finger is straight. Middle finger is straight but pointing forward so that is at 90 degrees to index finger. Tip of thumb is touching middle of middle finger. Hand is turned to the left and twisted over so that index finger is horizontal and middle finger is pointing down. Viewer can (sort of) see a \"P\" shape formed by middle finger and thumb..",
+            "To sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread..",
+            "To sign U in ASL: Ring and little finger are folded against the palm, held down by thumb, index and middle finger are straight and together.."
+        ],
+        "imgs": [
+            "./asl_dataset/images/P.jpg",
+            "./asl_dataset/images/A.jpg",
+            "./asl_dataset/images/K.jpg"
+        ],
+        "text_imgs": [
+            "/share0/cho/MultimodalRAG/asl_dataset/images/P.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/U.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/D.jpg"
+        ],
+        "img_response": "To sign P in ASL:\n- Ring and little finger are folded down.\n- Index finger is straight.\n- The middle finger is straight but pointing forward so that it is at 90 degrees to the index finger.\n- Tip of the thumb is touching the middle of the middle finger.\n- Hand is turned to the left and twisted over so that the index finger is horizontal and the middle finger is pointing down.\n\nSorry, I cannot assist using the provided images for this purpose.",
+        "text_img_response": "Based on the provided details, here's how you can sign \"P\" in ASL:\n\n1. Fold down your ring and little fingers.\n2. Keep your index finger straight.\n3. Keep your middle finger straight but point it forward so that it is at a 90-degree angle to your index finger.\n4. Touch the tip of your thumb to the middle of your middle finger.\n5. Turn your hand to the left and twist it over so that your index finger is horizontal and your middle finger is pointing down.\n\nThe hand shape should resemble the letter \"P\".\n\n(Unfortunately, the images provided do not match the description of the \"P\" hand sign in ASL)."
+    },
+    "Q": {
+        "query_str": "How can I sign a Q?.",
+        "query": "Images of hand gestures for ASL are provided.\n---------------------\nTo sign Q in ASL: Ring and little fingers are folded down across palm. Thumb is straight but pulled in so that it is in front of the index finger. The index finger is straight and pointing forwards slightly so that it is parallel to the thumb. The index finger and thumb are not touching. The Middle finger is bent down and across to the right of the thumb (this hurts !). The whole hand is turned towards the left and tilted so the thumb and index finger are towards the viewer and pointing almost straight down..\nA hand is positioned with fingers bent, resembling the shape of the letter \"Q\". The background is a plain, light-colored surface. There is a green square with the letter \"Q\" in the bottom right corner of the image.\nTo sign U in ASL: Ring and little finger are folded against the palm, held down by thumb, index and middle finger are straight and together..\n\n---------------------\nIf the images provided cannot help in answering the query\nthen respond that you are unable to answer the query. Otherwise,\nusing only the context provided, and not prior knowledge,\nprovide an answer to the query.Query: How can I sign a Q?.\nAnswer: ",
+        "texts": [
+            "To sign Q in ASL: Ring and little fingers are folded down across palm. Thumb is straight but pulled in so that it is in front of the index finger. The index finger is straight and pointing forwards slightly so that it is parallel to the thumb. The index finger and thumb are not touching. The Middle finger is bent down and across to the right of the thumb (this hurts !). The whole hand is turned towards the left and tilted so the thumb and index finger are towards the viewer and pointing almost straight down..",
+            "A hand is positioned with fingers bent, resembling the shape of the letter \"Q\". The background is a plain, light-colored surface. There is a green square with the letter \"Q\" in the bottom right corner of the image.",
+            "To sign U in ASL: Ring and little finger are folded against the palm, held down by thumb, index and middle finger are straight and together.."
+        ],
+        "imgs": [
+            "./asl_dataset/images/Q.jpg",
+            "./asl_dataset/images/O.jpg",
+            "./asl_dataset/images/K.jpg"
+        ],
+        "text_imgs": [
+            "/share0/cho/MultimodalRAG/asl_dataset/images/Q.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/U.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/L.jpg"
+        ],
+        "img_response": "Using only the context provided:\n\nTo sign a Q in ASL:\n1. Fold your ring and little fingers down across your palm.\n2. Keep your thumb straight but pull it in so that it is in front of your index finger.\n3. Keep your index finger straight and pointing forward slightly so that it is parallel to the thumb. The index finger and thumb should not be touching.\n4. Bend your middle finger down and across to the right of the thumb.\n5. Turn your whole hand towards the left and tilt it so the thumb and index finger are towards the viewer and pointing almost straight down.\n\nReference the provided image of the \"Q\" sign for visual guidance.",
+        "text_img_response": "According to the context provided, to sign \"Q\" in American Sign Language (ASL):\n\n1. Fold your ring and little fingers down across your palm.\n2. Keep your thumb straight but pull it in so that it is in front of your index finger.\n3. Keep your index finger straight and pointing forward slightly, making it parallel to the thumb. The index finger and thumb should not touch.\n4. Bend your middle finger down and across to the right of the thumb.\n5. Turn your hand towards the left and tilt it so that the thumb and index finger are facing the viewer and pointing almost straight down.\n\nRefer to the provided image to match your hand shape with the correct gesture."
+    },
+    "R": {
+        "query_str": "How can I sign a R?.",
+        "query": "Images of hand gestures for ASL are provided.\n---------------------\nTo sign R in ASL: Ring and little finger are folded against the palm, held down by thumb, index and middle finger are straight and crossed, index finger in front..\nTo sign Q in ASL: Ring and little fingers are folded down across palm. Thumb is straight but pulled in so that it is in front of the index finger. The index finger is straight and pointing forwards slightly so that it is parallel to the thumb. The index finger and thumb are not touching. The Middle finger is bent down and across to the right of the thumb (this hurts !). The whole hand is turned towards the left and tilted so the thumb and index finger are towards the viewer and pointing almost straight down..\nTo sign U in ASL: Ring and little finger are folded against the palm, held down by thumb, index and middle finger are straight and together..\n\n---------------------\nIf the images provided cannot help in answering the query\nthen respond that you are unable to answer the query. Otherwise,\nusing only the context provided, and not prior knowledge,\nprovide an answer to the query.Query: How can I sign a R?.\nAnswer: ",
+        "texts": [
+            "To sign R in ASL: Ring and little finger are folded against the palm, held down by thumb, index and middle finger are straight and crossed, index finger in front..",
+            "To sign Q in ASL: Ring and little fingers are folded down across palm. Thumb is straight but pulled in so that it is in front of the index finger. The index finger is straight and pointing forwards slightly so that it is parallel to the thumb. The index finger and thumb are not touching. The Middle finger is bent down and across to the right of the thumb (this hurts !). The whole hand is turned towards the left and tilted so the thumb and index finger are towards the viewer and pointing almost straight down..",
+            "To sign U in ASL: Ring and little finger are folded against the palm, held down by thumb, index and middle finger are straight and together.."
+        ],
+        "imgs": [
+            "./asl_dataset/images/A.jpg",
+            "./asl_dataset/images/R.jpg",
+            "./asl_dataset/images/B.jpg"
+        ],
+        "text_imgs": [
+            "/share0/cho/MultimodalRAG/asl_dataset/images/R.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/L.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/Q.jpg"
+        ],
+        "img_response": "To sign \"R\" in ASL, fold your ring and little finger against the palm and hold them down with your thumb. Then, keep your index and middle finger straight and crossed, with the index finger in front. \n\nThe image labeled \"R\" matches this description, showing the appropriate hand gesture for signing \"R\" in ASL.",
+        "text_img_response": "To sign \"R\" in ASL:\n\n- Fold your ring and little fingers against your palm.\n- Hold them down with your thumb.\n- Keep your index and middle fingers straight and crossed, with the index finger in front of the middle finger.\n\nRefer to the first image for the sign of \"R\"."
+    },
+    "S": {
+        "query_str": "How can I sign a S?.",
+        "query": "Images of hand gestures for ASL are provided.\n---------------------\nTo sign S in ASL: Clenched fist. All fingers folded tightly into palm. Thumb is across index and middle fingers..\nTo sign U in ASL: Ring and little finger are folded against the palm, held down by thumb, index and middle finger are straight and together..\nTo sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread..\n\n---------------------\nIf the images provided cannot help in answering the query\nthen respond that you are unable to answer the query. Otherwise,\nusing only the context provided, and not prior knowledge,\nprovide an answer to the query.Query: How can I sign a S?.\nAnswer: ",
+        "texts": [
+            "To sign S in ASL: Clenched fist. All fingers folded tightly into palm. Thumb is across index and middle fingers..",
+            "To sign U in ASL: Ring and little finger are folded against the palm, held down by thumb, index and middle finger are straight and together..",
+            "To sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread.."
+        ],
+        "imgs": [
+            "./asl_dataset/images/S.jpg",
+            "./asl_dataset/images/Y.jpg",
+            "./asl_dataset/images/A.jpg"
+        ],
+        "text_imgs": [
+            "/share0/cho/MultimodalRAG/asl_dataset/images/S.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/L.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/D.jpg"
+        ],
+        "img_response": "I'm unable to answer the query with the provided images. Based on the context:\n\nTo sign \"S\" in ASL:\n- Clench your fist.\n- Fold all your fingers tightly into your palm.\n- Place your thumb across the index and middle fingers.",
+        "text_img_response": "To sign \"S\" in ASL:\n- Form a clenched fist.\n- Fold all your fingers tightly into your palm.\n- Place your thumb across your index and middle fingers.\n\nRefer to the image labeled \"S\" for a visual representation."
+    },
+    "T": {
+        "query_str": "How can I sign a T?.",
+        "query": "Images of hand gestures for ASL are provided.\n---------------------\nTo sign T in ASL: Middle, ring and little fingers are fold down across palm. Thumb is folded across middle finger. Index finger is folded over thumb..\nTo sign F in ASL: Tip of index finger is touching tip of thumb. Middle, ring and little fingers are straight and slightly spread..\nTo sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread..\n\n---------------------\nIf the images provided cannot help in answering the query\nthen respond that you are unable to answer the query. Otherwise,\nusing only the context provided, and not prior knowledge,\nprovide an answer to the query.Query: How can I sign a T?.\nAnswer: ",
+        "texts": [
+            "To sign T in ASL: Middle, ring and little fingers are fold down across palm. Thumb is folded across middle finger. Index finger is folded over thumb..",
+            "To sign F in ASL: Tip of index finger is touching tip of thumb. Middle, ring and little fingers are straight and slightly spread..",
+            "To sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread.."
+        ],
+        "imgs": [
+            "./asl_dataset/images/T.jpg",
+            "./asl_dataset/images/Y.jpg",
+            "./asl_dataset/images/A.jpg"
+        ],
+        "text_imgs": [
+            "/share0/cho/MultimodalRAG/asl_dataset/images/T.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/U.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/L.jpg"
+        ],
+        "img_response": "Based on the provided context:\n- To sign T in ASL: Middle, ring, and little fingers are folded down across the palm. The thumb is folded across the middle finger. The index finger is folded over the thumb.\n\nUnfortunately, I cannot confirm this from the provided images.",
+        "text_img_response": "To sign the letter T in ASL:\n1. Fold your middle, ring, and little fingers down across your palm.\n2. Fold your thumb across your middle finger.\n3. Fold your index finger over your thumb.\n\nThe first image you've provided illustrates the correct hand position for signing T in ASL."
+    },
+    "U": {
+        "query_str": "How can I sign a U?.",
+        "query": "Images of hand gestures for ASL are provided.\n---------------------\nTo sign U in ASL: Ring and little finger are folded against the palm, held down by thumb, index and middle finger are straight and together..\nA hand is shown with the index and middle fingers extended and held together, while the other fingers are folded down. The background is a plain, light-colored wall. In the bottom right corner, there is a green square with the letter \"U\" inside it.\nTo sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread..\n\n---------------------\nIf the images provided cannot help in answering the query\nthen respond that you are unable to answer the query. Otherwise,\nusing only the context provided, and not prior knowledge,\nprovide an answer to the query.Query: How can I sign a U?.\nAnswer: ",
+        "texts": [
+            "To sign U in ASL: Ring and little finger are folded against the palm, held down by thumb, index and middle finger are straight and together..",
+            "A hand is shown with the index and middle fingers extended and held together, while the other fingers are folded down. The background is a plain, light-colored wall. In the bottom right corner, there is a green square with the letter \"U\" inside it.",
+            "To sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread.."
+        ],
+        "imgs": [
+            "./asl_dataset/images/U.jpg",
+            "./asl_dataset/images/I.jpg",
+            "./asl_dataset/images/B.jpg"
+        ],
+        "text_imgs": [
+            "/share0/cho/MultimodalRAG/asl_dataset/images/U.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/V.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/L.jpg"
+        ],
+        "img_response": "Based on the context provided, the correct image to sign the letter \"U\" in ASL is as shown in the first image. The index and middle fingers are extended and held close together, while the remaining fingers are folded down.\n\nNote: Please disregard the provided additional images as they may cause confusion.",
+        "text_img_response": "To sign the letter \"U\" in American Sign Language (ASL), extend your index and middle fingers and hold them together, while folding the ring and little fingers down to your palm with the thumb holding them in place. Below is an image of the handshape for the letter \"U\":\n\n![U Sign](https://assets.cdn.lexiquepro.com/images/index.jpg)"
+    },
+    "V": {
+        "query_str": "How can I sign a V?.",
+        "query": "Images of hand gestures for ASL are provided.\n---------------------\nTo sign V in ASL: Ring and little finger fold against the palm, held down by thumb, index and middle finger are straight and spread to form a \"V\" shape..\nTo sign K in ASL: Ring and little fingers are folded down. Index and middle finger are straight and slightly spread. Thumb is straight and pointing up to the middle finger. (This is very similar to V the only difference is the position of the thumb..\nTo sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread..\n\n---------------------\nIf the images provided cannot help in answering the query\nthen respond that you are unable to answer the query. Otherwise,\nusing only the context provided, and not prior knowledge,\nprovide an answer to the query.Query: How can I sign a V?.\nAnswer: ",
+        "texts": [
+            "To sign V in ASL: Ring and little finger fold against the palm, held down by thumb, index and middle finger are straight and spread to form a \"V\" shape..",
+            "To sign K in ASL: Ring and little fingers are folded down. Index and middle finger are straight and slightly spread. Thumb is straight and pointing up to the middle finger. (This is very similar to V the only difference is the position of the thumb..",
+            "To sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread.."
+        ],
+        "imgs": [
+            "./asl_dataset/images/V.jpg",
+            "./asl_dataset/images/Y.jpg",
+            "./asl_dataset/images/U.jpg"
+        ],
+        "text_imgs": [
+            "/share0/cho/MultimodalRAG/asl_dataset/images/V.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/U.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/W.jpg"
+        ],
+        "img_response": "To sign V in ASL: The ring and little fingers fold against the palm, held down by the thumb. The index and middle fingers are straight and spread to form a \"V\" shape. Here is an example image for reference:\n\n![Sign V](https://miro.medium.com/max/1400/1*C0TPpJwzejlZZafnJeYPCQ.jpeg)\n\n",
+        "text_img_response": "To sign \"V\" in ASL:\n- Fold the ring and little fingers against the palm and hold them down with your thumb.\n- Keep the index and middle fingers straight and spread to form a \"V\" shape.\n\nThe first image provided shows the correct gesture."
+    },
+    "W": {
+        "query_str": "How can I sign a W?.",
+        "query": "Images of hand gestures for ASL are provided.\n---------------------\nTo sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread..\nTo sign U in ASL: Ring and little finger are folded against the palm, held down by thumb, index and middle finger are straight and together..\nTo sign X in ASL: Middle, ring and little fingers are folded down. Index finger is bent at both joints. Thumb is pulled in and slightly bent at the joint. The hand is turned to the left so view can see thumb and index finger..\n\n---------------------\nIf the images provided cannot help in answering the query\nthen respond that you are unable to answer the query. Otherwise,\nusing only the context provided, and not prior knowledge,\nprovide an answer to the query.Query: How can I sign a W?.\nAnswer: ",
+        "texts": [
+            "To sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread..",
+            "To sign U in ASL: Ring and little finger are folded against the palm, held down by thumb, index and middle finger are straight and together..",
+            "To sign X in ASL: Middle, ring and little fingers are folded down. Index finger is bent at both joints. Thumb is pulled in and slightly bent at the joint. The hand is turned to the left so view can see thumb and index finger.."
+        ],
+        "imgs": [
+            "./asl_dataset/images/W.jpg",
+            "./asl_dataset/images/U.jpg",
+            "./asl_dataset/images/P.jpg"
+        ],
+        "text_imgs": [
+            "/share0/cho/MultimodalRAG/asl_dataset/images/W.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/U.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/V.jpg"
+        ],
+        "img_response": "To sign \"W\" in ASL, touch the tip of your little finger to the tip of your thumb, while keeping your index, middle, and ring fingers straight and slightly spread. Here is an image demonstrating the sign for \"W\":\n\n![W](https://example.com/W.jpg)",
+        "text_img_response": "To sign the letter \"W\" in American Sign Language (ASL):\n\n1. Touch the tip of your little finger to the tip of your thumb.\n2. Keep your index, middle, and ring fingers straight and slightly spread apart.\n\nThe image provided demonstrates this hand gesture accurately."
+    },
+    "X": {
+        "query_str": "How can I sign a X?.",
+        "query": "Images of hand gestures for ASL are provided.\n---------------------\nTo sign X in ASL: Middle, ring and little fingers are folded down. Index finger is bent at both joints. Thumb is pulled in and slightly bent at the joint. The hand is turned to the left so view can see thumb and index finger..\nTo sign Y in ASL: Index, middle and ring ringers folded against palm. Little finger and thumb are straight and spread wide..\nTo sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread..\n\n---------------------\nIf the images provided cannot help in answering the query\nthen respond that you are unable to answer the query. Otherwise,\nusing only the context provided, and not prior knowledge,\nprovide an answer to the query.Query: How can I sign a X?.\nAnswer: ",
+        "texts": [
+            "To sign X in ASL: Middle, ring and little fingers are folded down. Index finger is bent at both joints. Thumb is pulled in and slightly bent at the joint. The hand is turned to the left so view can see thumb and index finger..",
+            "To sign Y in ASL: Index, middle and ring ringers folded against palm. Little finger and thumb are straight and spread wide..",
+            "To sign W in ASL: Tip of little finger is touching tip of thumb. Index, middle and ring fingers are straight and slightly spread.."
+        ],
+        "imgs": [
+            "./asl_dataset/images/X.jpg",
+            "./asl_dataset/images/A.jpg",
+            "./asl_dataset/images/Y.jpg"
+        ],
+        "text_imgs": [
+            "/share0/cho/MultimodalRAG/asl_dataset/images/X.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/Y.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/D.jpg"
+        ],
+        "img_response": "To sign \"X\" in ASL:\n\n1. Fold down your middle, ring, and little fingers.\n2. Bend your index finger at both joints.\n3. Pull in your thumb and slightly bend it at the joint.\n4. Turn your hand to the left so that the thumb and index finger are visible.\n\nHere is the visual representation of the sign for \"X\":\n![X](https://user-images.githubusercontent.com/18090190/187990251-268d9e7c-903c-4aa0-bcea-cb0d2374a2ef.jpg)",
+        "text_img_response": "To sign X in ASL:\n\n1. Fold down your middle, ring, and little fingers.\n2. Bend your index finger at both joints.\n3. Pull your thumb in and slightly bend it at the joint.\n4. Turn your hand to the left so that the thumb and index finger are visible to the viewer. \n\nRefer to the first image for visual reference:\n\n![Sign X](https://example-image-x)\n\n(Note: There might be a mix-up in visual references provided; refer to the textual instructions primarily for accurate details on the sign.)"
+    },
+    "Y": {
+        "query_str": "How can I sign a Y?.",
+        "query": "Images of hand gestures for ASL are provided.\n---------------------\nTo sign Y in ASL: Index, middle and ring ringers folded against palm. Little finger and thumb are straight and spread wide..\nTo sign U in ASL: Ring and little finger are folded against the palm, held down by thumb, index and middle finger are straight and together..\nTo sign X in ASL: Middle, ring and little fingers are folded down. Index finger is bent at both joints. Thumb is pulled in and slightly bent at the joint. The hand is turned to the left so view can see thumb and index finger..\n\n---------------------\nIf the images provided cannot help in answering the query\nthen respond that you are unable to answer the query. Otherwise,\nusing only the context provided, and not prior knowledge,\nprovide an answer to the query.Query: How can I sign a Y?.\nAnswer: ",
+        "texts": [
+            "To sign Y in ASL: Index, middle and ring ringers folded against palm. Little finger and thumb are straight and spread wide..",
+            "To sign U in ASL: Ring and little finger are folded against the palm, held down by thumb, index and middle finger are straight and together..",
+            "To sign X in ASL: Middle, ring and little fingers are folded down. Index finger is bent at both joints. Thumb is pulled in and slightly bent at the joint. The hand is turned to the left so view can see thumb and index finger.."
+        ],
+        "imgs": [
+            "./asl_dataset/images/Y.jpg",
+            "./asl_dataset/images/A.jpg",
+            "./asl_dataset/images/T.jpg"
+        ],
+        "text_imgs": [
+            "/share0/cho/MultimodalRAG/asl_dataset/images/Y.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/U.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/L.jpg"
+        ],
+        "img_response": "To sign Y in ASL according to the provided context:\n1. Fold your index, middle, and ring fingers against your palm.\n2. Keep your thumb and little finger straight and spread wide.\n\nUnfortunately, the images provided do not match the hand gesture required to sign the letter \"Y\" in ASL as described in the context. The second and third images do not illustrate the required gesture. Here is a description based on your textual context:\n\n1. Fold the index, middle, and ring fingers against the palm.\n2. Extend the thumb and little finger out to the sides.\n\n",
+        "text_img_response": "To sign Y in ASL, fold your index, middle, and ring fingers against your palm. Keep your little finger and thumb straight and spread wide apart."
+    },
+    "Z": {
+        "query_str": "How can I sign a Z?.",
+        "query": "Images of hand gestures for ASL are provided.\n---------------------\nTo sign Z in ASL: Middle, ring and little fingers are folded. Thumb is folded across middle and ring fingers. Index finger is straight. The hand is moved so that the tip of index finger draws out a \"Z\" shape. The motion is (1) from right to left. (2) from left to right and forward. (3) from right to left..\nTo sign U in ASL: Ring and little finger are folded against the palm, held down by thumb, index and middle finger are straight and together..\nTo sign X in ASL: Middle, ring and little fingers are folded down. Index finger is bent at both joints. Thumb is pulled in and slightly bent at the joint. The hand is turned to the left so view can see thumb and index finger..\n\n---------------------\nIf the images provided cannot help in answering the query\nthen respond that you are unable to answer the query. Otherwise,\nusing only the context provided, and not prior knowledge,\nprovide an answer to the query.Query: How can I sign a Z?.\nAnswer: ",
+        "texts": [
+            "To sign Z in ASL: Middle, ring and little fingers are folded. Thumb is folded across middle and ring fingers. Index finger is straight. The hand is moved so that the tip of index finger draws out a \"Z\" shape. The motion is (1) from right to left. (2) from left to right and forward. (3) from right to left..",
+            "To sign U in ASL: Ring and little finger are folded against the palm, held down by thumb, index and middle finger are straight and together..",
+            "To sign X in ASL: Middle, ring and little fingers are folded down. Index finger is bent at both joints. Thumb is pulled in and slightly bent at the joint. The hand is turned to the left so view can see thumb and index finger.."
+        ],
+        "imgs": [
+            "./asl_dataset/images/Z.jpg",
+            "./asl_dataset/images/K.jpg",
+            "./asl_dataset/images/P.jpg"
+        ],
+        "text_imgs": [
+            "/share0/cho/MultimodalRAG/asl_dataset/images/Z.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/L.jpg",
+            "/share0/cho/MultimodalRAG/asl_dataset/images/U.jpg"
+        ],
+        "img_response": "I'm unable to provide the specific image-based context needed to accurately depict the correct hand gesture solely based on the images provided. Here is the description provided earlier on how to sign the letter \"Z\" in American Sign Language (ASL):\n\nTo sign \"Z\" in ASL:\n1. Fold the middle, ring, and little fingers down.\n2. Fold the thumb across the middle and ring fingers.\n3. Keep the index finger straight.\n4. Move the hand so that the tip of the index finger draws out a \"Z\" shape. The motion is:\n   - From right to left,\n   - From left to right and forward, and\n   - From right to left again.",
+        "text_img_response": "I cannot answer the query based on the images provided. \n\nHowever, according to the context described in the instructions, you can sign the letter \"Z\" in American Sign Language (ASL) by following these steps:\n\n1. Middle, ring, and little fingers are folded.\n2. The thumb is folded across the middle and ring fingers.\n3. The index finger is straight.\n4. Move the hand so that the tip of the index finger draws out a \"Z\" shape. The motion is:\n   - from right to left,\n   - then from left to right and forward,\n   - and finally from right to left again.\n\nBy performing this motion with your hand in the described shape, you can sign the letter \"Z\" in ASL."
+    },
+    "text_hitrate": 1.0,
+    "img_hitrate": 0.9615384615384616,
+    "text_img_hitrate": 1.0,
+    "text_mrr": 1.0,
+    "img_mrr": 0.8974358974358974,
+    "text_img_mrr": 1.0
+}
